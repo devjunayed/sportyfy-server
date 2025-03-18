@@ -6,13 +6,19 @@ const createFacilityValidationSchema = z.object({
       required_error: 'Facility name is required',
       invalid_type_error: 'Facility name is invalid',
     }),
-    image: z.string({
-      required_error: 'Facility image is required',
-      invalid_type_error: 'Facility image is invalid',
-    }),
+    images: z.array(
+      z.string({
+        required_error: 'Facility image is required',
+        invalid_type_error: 'Facility image is invalid',
+      }),
+    ),
     description: z.string({
       required_error: 'Facility description is required',
       invalid_type_error: 'Facility description is invalid',
+    }),
+    shortDescription: z.string({
+      required_error: 'Facility short description is required',
+      invalid_type_error: 'Facility short description is invalid',
     }),
     pricePerHour: z.number({
       required_error: 'Facility price per hour is required',
