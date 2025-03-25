@@ -1,46 +1,53 @@
 import { model, Schema } from 'mongoose'
-import { TBooking } from './booking.interface'
+import { TReviews } from './reviews.interface'
 
-const bookingSchema = new Schema<TBooking>({
-  date: {
-    type: String,
-    required: true,
-  },
-  startTime: {
-    type: String,
-    required: true,
-  },
-  endTime: {
-    type: String,
-    required: true,
-  },
-  user: {
+
+const reviewSchema = new Schema<TReviews>({
+  facilityId: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'User',
+    ref: 'Facility'
   },
-  facility: {
+  userId: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'Facility',
+    ref: 'User'
   },
-  payableAmount: {
+  rating: {
     type: Number,
+    required: true,
   },
-  transactionId: {
+  review: {
     type: String,
-    required: true
+    required: true,
+  } 
+});
+
+
+const reviewsSchema = new Schema<TReviews>({
+  facilityId: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    ref: 'Facility'
   },
-  isBooked: {
+  userId: {
+    type: Schema.Types.ObjectId,
+    required: true,
+    ref: 'User'
+  },
+  rating: {
+    type: Number,
+    required: true,
+  },
+  review: {
     type: String,
-    enum: ['confirmed', 'canceled'],
-    default: 'confirmed',
+    required: true,
   },
-  paymentStatus: {
-    type: String,
-    enum: ['Pending', 'Paid', "Canceled"],
-    default: 'Pending',
-  },
+  replys: {
+    type: [reviewSchema],
+    required: false
+  }
+ 
 })
 
-export const Booking = model<TBooking>('Booking', bookingSchema)
+export const Review = model<TReviews>('Reviews', reviewsSchema)

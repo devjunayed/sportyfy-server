@@ -1,4 +1,4 @@
-import { TSlot } from './reviews.booking.interface'
+import { TSlot } from './reviews.interface'
 import { Booking } from './reviews.model'
 
 export async function getSlot(date: string, facilityId: string) {
