@@ -1,16 +1,19 @@
-import z from 'zod'
+import { z } from 'zod';
 
-const createBookingValidationSchema = z.object({
-  date: z.string().min(1, 'Date is required'),
-  startTime: z.string().min(1, 'Start time is required'),
-  endTime: z.string().min(1, 'End time is required'),
-  user: z.string(),
-  facility: z.string().min(1, 'Facility is required'),
-  payableAmount: z.number().optional(),
-  isBooked: z.enum(['confirmed', 'canceled']).default('confirmed'),
-  paymentStatus: z.enum(['Pending', 'Paid', "Canceled"]).default('Pending'),
-})
+export const ReviewSchema = z.object({
+  facilityId: z.string().regex(/^[0-9a-fA-F]{24}$/, "Invalid ObjectId"), // Ensures valid MongoDB ID
+  userId: z.string().regex(/^[0-9a-fA-F]{24}$/, "Invalid ObjectId"),
+  rating: z.number().min(1, "Rating must be at least 1").max(5, "Rating cannot exceed 5"),
+  review: z.string().min(1, "Review cannot be empty"),
+  replies: z.array(
+    z.object({
+      facilityId: z.string().regex(/^[0-9a-fA-F]{24}$/, "Invalid ObjectId"),
+      userId: z.string().regex(/^[0-9a-fA-F]{24}$/, "Invalid ObjectId"),
+      rating: z.number().min(1).max(5),
+      review: z.string().min(1, "Review cannot be empty"),
+    })
+  ).optional(),
+});
 
-export const BookingValidation = {
-  createBookingValidationSchema,
-}
+// TypeScript inferred type
+export type TReviews = z.infer<typeof ReviewSchema>;

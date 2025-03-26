@@ -1,5 +1,4 @@
 import { Request } from 'express'
-import { Booking } from './reviews.model'
 import { Facility } from '../facility/facility.model'
 import AppError from '../../errors/AppError'
 import httpStatus from 'http-status'
