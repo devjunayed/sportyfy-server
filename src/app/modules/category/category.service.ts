@@ -23,21 +23,8 @@ const deleteCategoryFromDB = async (id: string) => {
   const CategoryData = await Category.findById(id)
   return CategoryData
 }
-const getAllCategoryFromDB = async ({search = "",  minPrice = 0, maxPrice = Infinity}) => {
+const getAllCategoryFromDB = async () => {
   const query: any = { isDeleted: { $ne: true } };
-
-  if (search) {
-    query.$or = [
-      { name: { $regex: search, $options: "i" } },
-      { location: { $regex: search, $options: "i" } }
-    ];
-  }
-
-  
-
-  if (minPrice || maxPrice) {
-    query.pricePerHour = { $gte: minPrice, $lte: maxPrice };
-  }
 
   const result = await Category.find(query);
   return result;

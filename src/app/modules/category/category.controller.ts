@@ -34,11 +34,11 @@ const deleteCategory = catchAsync(async (req, res) => {
   })
 })
 const getAllCategory = catchAsync(async (req, res) => {
-  const result = await CategoryService.getAllCategoryFromDB(req.query)
+  const result = await CategoryService.getAllCategoryFromDB()
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Facilities retrieved successfully',
+    message: 'Categories data retrieved successfully',
     data: result,
   })
 })
