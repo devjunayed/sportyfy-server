@@ -10,10 +10,11 @@ const app: Application = express()
 // cors
 app.use(cors({
   origin: ['http://localhost:5173', 'https://sportyfy.devjunayed.xyz'],
-  methods: "GET, POST, PUT, DELETE",
+  methods: ["GET", "POST", "PUT", "UPDATE", "DELETE"],
   credentials: true,
-  allowedHeaders: "Content-Type, Authorization"
+  allowedHeaders: ["Content-Type", "Authorization"]
 }))
+
 
 // middlewares for getting data from the frontend
 app.use(express.json())

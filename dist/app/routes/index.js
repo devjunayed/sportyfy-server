@@ -6,6 +6,7 @@ const facility_route_1 = require("../modules/facility/facility.route");
 const booking_route_1 = require("../modules/booking/booking.route");
 const user_route_1 = require("../modules/user/user.route");
 const payment_route_1 = require("../modules/payment/payment.route");
+const reviews_route_1 = require("../modules/reviews/reviews.route");
 const router = (0, express_1.Router)();
 const routes = [
     {
@@ -27,6 +28,10 @@ const routes = [
     {
         path: "/payment",
         route: payment_route_1.PaymentRoutes
+    },
+    {
+        path: "/review",
+        route: reviews_route_1.ReviewsRoutes
     }
 ];
 routes.forEach((route) => router.use(route.path, route.route));
