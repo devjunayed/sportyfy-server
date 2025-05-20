@@ -1,34 +1,34 @@
 import express from 'express'
-import { FacilityController } from './category.controller'
 import auth from '../../middlewares/auth'
 import { validateRequest } from '../../middlewares/validateRequest'
-import { FacilityValidation } from './category.validation'
+import { CategoryValidation } from './category.validation'
+import { CategoryController } from './category.controller'
 
 const router = express.Router()
 
-// Creating Facility
+// Creating category
 router.post(
   '/',
   auth('admin'),
-  validateRequest(FacilityValidation.createFacilityValidationSchema),
-  FacilityController.createFacility,
+  validateRequest(CategoryValidation.createCategoryValidationSchema),
+  CategoryController.createCategory,
 )
 // updating Facility
 router.put(
   '/:id',
   auth('admin'),
-  validateRequest(FacilityValidation.updateFacilityValidationSchema),
-  FacilityController.updateFacility,
+  validateRequest(CategoryValidation.updateCategoryValidationSchema),
+  CategoryController.updateCategory,
 )
 
 // soft deleting facility
-router.delete('/:id', auth('admin'), FacilityController.deleteFacility)
+router.delete('/:id', auth('admin'), CategoryController.deleteCategory)
 
 // get all facility
-router.get('/', FacilityController.getAllFacility)
+router.get('/', CategoryController.getAllCategory)
 
 
 // get single facility
-router.get('/:id', FacilityController.getSingleFAcility)
+router.get('/:id', CategoryController.getSingleCategory)
 
-export const FacilityRoutes = router
+export const CategoryRoutes = router

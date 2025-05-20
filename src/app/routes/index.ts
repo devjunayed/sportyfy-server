@@ -5,6 +5,7 @@ import { BookingRoutes } from '../modules/booking/booking.route'
 import { UserRoutes } from '../modules/user/user.route'
 import { PaymentRoutes } from '../modules/payment/payment.route'
 import { ReviewsRoutes } from '../modules/reviews/reviews.route'
+import { CategoryRoutes } from '../modules/category/category.route'
 
 const router = Router()
 
@@ -16,6 +17,10 @@ const routes = [
   {
     path: '/facility',
     route: FacilityRoutes,
+  },
+  {
+    path: '/category',
+    route: CategoryRoutes,
   },
   {
     path: '/',

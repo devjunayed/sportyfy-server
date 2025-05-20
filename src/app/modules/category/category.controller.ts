@@ -1,40 +1,40 @@
 import httpStatus from 'http-status'
 import { catchAsync } from '../../utils/catchAsync'
 import { sendResponse } from '../../utils/sendResponse'
-import { FacilityService } from './category.service'
+import { CategoryService } from './category.service'
 
-const createFacility = catchAsync(async (req, res) => {
-  const result = await FacilityService.createFacilityIntoDB(req.body)
+const createCategory = catchAsync(async (req, res) => {
+  const result = await CategoryService.createCategoryIntoDB(req.body)
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Facility added successfully',
+    message: 'Category added successfully',
     data: result,
   })
 })
-const updateFacility = catchAsync(async (req, res) => {
-  const result = await FacilityService.updateFacilityFromDB(
+const updateCategory = catchAsync(async (req, res) => {
+  const result = await CategoryService.updateCategoryFromDB(
     req.params.id,
     req.body,
   )
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Facility updated successfully',
+    message: 'Category updated successfully',
     data: result,
   })
 })
-const deleteFacility = catchAsync(async (req, res) => {
-  const result = await FacilityService.deleteFacilityFromDB(req.params.id)
+const deleteCategory = catchAsync(async (req, res) => {
+  const result = await CategoryService.deleteCategoryFromDB(req.params.id)
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Facility deleted successfully',
+    message: 'Category deleted successfully',
     data: result,
   })
 })
-const getAllFacility = catchAsync(async (req, res) => {
-  const result = await FacilityService.getAllFacilityFromDB(req.query)
+const getAllCategory = catchAsync(async (req, res) => {
+  const result = await CategoryService.getAllCategoryFromDB(req.query)
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
@@ -43,20 +43,20 @@ const getAllFacility = catchAsync(async (req, res) => {
   })
 })
 
-const getSingleFAcility = catchAsync(async(req, res) => {
-  const result = await FacilityService.getSingleFacilityFromDB(req.params.id)
+const getSingleCategory = catchAsync(async(req, res) => {
+  const result = await CategoryService.getSingleCategoryFromDB(req.params.id)
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
-    message: 'Facility data retrieved successfully',
+    message: 'Category data retrieved successfully',
     data: result,
   })
 })
 
-export const FacilityController = {
-  createFacility,
-  updateFacility,
-  deleteFacility,
-  getAllFacility,
-  getSingleFAcility
+export const CategoryController = {
+  createCategory,
+  updateCategory,
+  deleteCategory,
+  getAllCategory,
+  getSingleCategory
 }

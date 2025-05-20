@@ -1,61 +1,36 @@
 import z from 'zod'
 
-const createFacilityValidationSchema = z.object({
+const createCategoryValidationSchema = z.object({
   body: z.object({
-    name: z.string({
-      required_error: 'Facility name is required',
-      invalid_type_error: 'Facility name is invalid',
+    title: z.string({
+      required_error: 'Category title is required',
+      invalid_type_error: 'Category title must be string',
     }),
-    images: z.array(
-      z.string({
-        required_error: 'Facility image is required',
-        invalid_type_error: 'Facility image is invalid',
-      }),
-    ),
-    description: z.string({
-      required_error: 'Facility description is required',
-      invalid_type_error: 'Facility description is invalid',
+    subtitle: z.string({
+      required_error: 'Category subtitle is required',
+      invalid_type_error: 'Category subtitle must be string',
     }),
-    shortDescription: z.string({
-      required_error: 'Facility short description is required',
-      invalid_type_error: 'Facility short description is invalid',
-    }),
-    pricePerHour: z.number({
-      required_error: 'Facility price per hour is required',
-      invalid_type_error: 'Facility price per hour is invalid',
-    }),
-    location: z.string({
-      required_error: 'Facility location is required',
-      invalid_type_error: 'Facility location is invalid',
+    image: z.string({
+      required_error: 'Category image is required',
+      invalid_type_error: 'Category image must be string',
     }),
   }),
 })
-const updateFacilityValidationSchema = z.object({
+const updateCategoryValidationSchema = z.object({
   body: z.object({
-    name: z
-      .string({
-        invalid_type_error: 'Facility name is invalid',
-      })
-      .optional(),
-    description: z
-      .string({
-        invalid_type_error: 'Facility description is invalid',
-      })
-      .optional(),
-    pricePerHour: z
-      .number({
-        invalid_type_error: 'Facility price per hour is invalid',
-      })
-      .optional(),
-    location: z
-      .string({
-        invalid_type_error: 'Facility location is invalid',
-      })
-      .optional(),
+    title: z.string({
+      invalid_type_error: 'Category title must be string',
+    }).optional(),
+    subtitle: z.string({
+      invalid_type_error: 'Category subtitle must be string',
+    }).optional(),
+    image: z.string({
+      invalid_type_error: 'Category image must be string',
+    }).optional(),
   }),
 })
 
-export const FacilityValidation = {
-  createFacilityValidationSchema,
-  updateFacilityValidationSchema,
+export const CategoryValidation = {
+  createCategoryValidationSchema,
+  updateCategoryValidationSchema,
 }

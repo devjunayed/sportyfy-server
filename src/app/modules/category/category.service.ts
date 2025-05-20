@@ -1,29 +1,29 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { TFacility } from './facility.interface'
-import { Facility } from './category.model'
+import { TCategory } from './category.interface';
+import { Category } from './category.model';
 
-const createFacilityIntoDB = async (payload: TFacility) => {
-  const result = await Facility.create(payload)
-  return result
+const createCategoryIntoDB = async (payload: TCategory) => {
+  const result = await Category.create(payload)
+  return result;
 }
 
-const updateFacilityFromDB = async (id: string, payload: TFacility) => {
+const updateCategoryFromDB = async (id: string, payload: TCategory) => {
   // updating data
-  await Facility.findByIdAndUpdate(id, payload)
+  await Category.findByIdAndUpdate(id, payload)
 
   // showing updated data
-  const facility = await Facility.findById(id)
-  return facility
+  const CategoryData = await Category.findById(id)
+  return CategoryData
 }
-const deleteFacilityFromDB = async (id: string) => {
+const deleteCategoryFromDB = async (id: string) => {
   // soft deleting data
-  await Facility.findByIdAndUpdate(id, { isDeleted: true })
+  await Category.findByIdAndUpdate(id, { isDeleted: true })
 
   // showing updated data
-  const facility = await Facility.findById(id)
-  return facility
+  const CategoryData = await Category.findById(id)
+  return CategoryData
 }
-const getAllFacilityFromDB = async ({search = "",  minPrice = 0, maxPrice = Infinity}) => {
+const getAllCategoryFromDB = async ({search = "",  minPrice = 0, maxPrice = Infinity}) => {
   const query: any = { isDeleted: { $ne: true } };
 
   if (search) {
@@ -39,20 +39,20 @@ const getAllFacilityFromDB = async ({search = "",  minPrice = 0, maxPrice = Infi
     query.pricePerHour = { $gte: minPrice, $lte: maxPrice };
   }
 
-  const result = await Facility.find(query);
+  const result = await Category.find(query);
   return result;
 };
 
 
-const getSingleFacilityFromDB = async(id: string) => {
-  const result = await Facility.findOne({_id: id});
+const getSingleCategoryFromDB = async(id: string) => {
+  const result = await Category.findOne({_id: id});
   return result;
 }
 
-export const FacilityService = {
-  createFacilityIntoDB,
-  updateFacilityFromDB,
-  deleteFacilityFromDB,
-  getAllFacilityFromDB,
-  getSingleFacilityFromDB
+export const CategoryService = {
+  createCategoryIntoDB,
+  updateCategoryFromDB,
+  deleteCategoryFromDB,
+  getAllCategoryFromDB,
+  getSingleCategoryFromDB
 }
