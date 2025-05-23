@@ -4,9 +4,9 @@ export type TFacility = {
   description: string
   shortDescription: string
   category: string
-  rating: number
+  rating?: number
   capacity: number
-  openHours: number
+  openHours: string
   highlight: string
   pricePerHour: number
   location: string
