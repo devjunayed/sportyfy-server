@@ -1,0 +1,491 @@
+[{
+  "_id": {
+    "$oid": "682ff143912080671754cf01"
+  },
+  "name": "City Football Arena",
+  "images": [
+    "https://i.ibb.co/kg1Rjwk8/pexels-photo-413195.jpg",
+    "https://i.ibb.co/JJwBFDT/pexels-photo-1171084.jpg"
+  ],
+  "shortDescription": "Top-notch football facility with all-weather turf.",
+  "description": "<p>Our City Football Arena offers a professional standard pitch with lighting and seating.</p>",
+  "pricePerHour": 50,
+  "capacity": 22,
+  "category": "football",
+  "highlight": "Certified FIFA-quality turf for top performance and safety.",
+  "openHours": "08:00 AM - 10:00 PM",
+  "rating": 5,
+  "location": "Downtown Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf02"
+  },
+  "name": "Downtown Basketball Court",
+  "images": [
+    "https://i.ibb.co/YTdMzPVF/pexels-photo-5275203.jpg",
+    "https://i.ibb.co/prMB7wSk/pexels-photo-1752757.webp"
+  ],
+  "shortDescription": "Indoor basketball court with modern flooring and hoops.",
+  "description": "<p>Equipped with NBA standard hoops and electronic scoreboards.</p>",
+  "pricePerHour": 40,
+  "capacity": 10,
+  "category": "basketball",
+  "highlight": "Professional-grade flooring and lighting for perfect play.",
+  "openHours": "09:00 AM - 09:00 PM",
+  "rating": 4.5,
+  "location": "Sports Plaza, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf03"
+  },
+  "name": "Green Valley Tennis Courts",
+  "images": [
+    "https://i.ibb.co/cX7Th91k/pexels-photo-6292755.jpg",
+    "https://i.ibb.co/HD9FwTYW/istockphoto-1510757303-612x612.jpg"
+  ],
+  "shortDescription": "Clay tennis courts with excellent drainage.",
+  "description": "<p>Enjoy professional clay courts with well-maintained surfaces.</p>",
+  "pricePerHour": 30,
+  "capacity": 4,
+  "category": "tennis",
+  "highlight": "Perfectly maintained clay courts with optional coaching.",
+  "openHours": "07:00 AM - 08:00 PM",
+  "rating": 4.7,
+  "location": "Green Valley Sports Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf04"
+  },
+  "name": "Sunshine Swimming Pool",
+  "images": [
+    "https://i.ibb.co/ZRzHGtZQ/pexels-photo-1247526.jpg",
+    "https://i.ibb.co/8nFn0fXd/free-photo-of-a-person-s-hand-is-touching-the-water-in-a-pool.jpg"
+  ],
+  "shortDescription": "Olympic size pool with heated water.",
+  "description": "<p>Indoor heated swimming pool suitable for all skill levels.</p>",
+  "pricePerHour": 60,
+  "capacity": 30,
+  "category": "swimming",
+  "highlight": "Heated Olympic-size pool with lifeguards on duty.",
+  "openHours": "06:00 AM - 09:00 PM",
+  "rating": 5,
+  "location": "Waterfront Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf05"
+  },
+  "name": "Prime Gym Center",
+  "images": [
+    "https://i.ibb.co/1fdfZbcr/pexels-photo-5942021.webp",
+    "https://i.ibb.co/1fhrCzQq/pexels-photo-5383782.jpg"
+  ],
+  "shortDescription": "Fully equipped gym with modern machines and free weights.",
+  "description": "<p>State-of-the-art equipment, personal training, and group classes.</p>",
+  "pricePerHour": 25,
+  "capacity": 50,
+  "category": "gym",
+  "highlight": "Modern equipment with certified personal trainers.",
+  "openHours": "05:00 AM - 11:00 PM",
+  "rating": 4.8,
+  "location": "Downtown Fitness Hub, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf06"
+  },
+  "name": "Cycle Track Park",
+  "images": [
+    "https://i.ibb.co/s9mJ4Tzy/pexels-photo-5807892.jpg",
+    "https://i.ibb.co/KjqhpCFp/pexels-photo-10284050.jpg"
+  ],
+  "shortDescription": "Outdoor cycling track with varying terrains.",
+  "description": "<p>Perfect for both beginners and advanced cyclists.</p>",
+  "pricePerHour": 15,
+  "capacity": 20,
+  "category": "cycling",
+  "highlight": "Safe, scenic cycling paths with bike rental available.",
+  "openHours": "06:00 AM - 08:00 PM",
+  "rating": 4.6,
+  "location": "City Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf07"
+  },
+  "name": "Table Tennis Arena",
+  "images": [
+    "https://i.ibb.co/j9c9fgWh/pexels-photo-976873.webp",
+    "https://i.ibb.co/j9Dw7JQy/pexels-photo-187329.webp"
+  ],
+  "shortDescription": "Indoor table tennis facility with multiple tables.",
+  "description": "<p>Perfect for casual play and tournaments.</p>",
+  "pricePerHour": 20,
+  "capacity": 12,
+  "category": "table tennis",
+  "highlight": "Professional tables and equipment available for hire.",
+  "openHours": "08:00 AM - 10:00 PM",
+  "rating": 4.4,
+  "location": "Recreation Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf08"
+  },
+  "name": "Volleyball Beach Courts",
+  "images": [
+    "https://i.ibb.co/rK0qHRY8/pexels-photo-12169345.jpg",
+    "https://i.ibb.co/svK4dCD4/pexels-photo-12169074.jpg"
+  ],
+  "shortDescription": "Sandy beach volleyball courts by the lake.",
+  "description": "<p>Enjoy beach volleyball with friends and leagues.</p>",
+  "pricePerHour": 35,
+  "capacity": 12,
+  "category": "volleyball",
+  "highlight": "Beautiful lakefront location with clean sand courts.",
+  "openHours": "09:00 AM - 07:00 PM",
+  "rating": 4.9,
+  "location": "Lakeview Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf09"
+  },
+  "name": "Eastside Football Grounds",
+  "images": [
+    "https://i.ibb.co/84PPmhFk/free-photo-of-footballer-celebrating-victory-in-stadium.jpg",
+    "https://i.ibb.co/cSQ28kWV/pexels-photo-13341625.jpg"
+  ],
+  "shortDescription": "Grass football grounds with floodlights.",
+  "description": "<p>Ideal for evening matches and training sessions.</p>",
+  "pricePerHour": 45,
+  "capacity": 22,
+  "category": "football",
+  "highlight": "Floodlit fields and changing rooms available.",
+  "openHours": "07:00 AM - 11:00 PM",
+  "rating": 4.7,
+  "location": "Eastside Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0a"
+  },
+  "name": "Northside Basketball Arena",
+  "images": [
+    "https://i.ibb.co/mVDbmDFy/pexels-photo-934083.jpg",
+    "https://i.ibb.co/QvWtt5Mz/pexels-photo-6777245.webp"
+  ],
+  "shortDescription": "Large indoor basketball arena with seating for 500.",
+  "description": "<p>Host tournaments or practice with friends here.</p>",
+  "pricePerHour": 55,
+  "capacity": 15,
+  "category": "basketball",
+  "highlight": "Professional-grade court with electronic scoreboard.",
+  "openHours": "08:00 AM - 10:00 PM",
+  "rating": 4.9,
+  "location": "Northside Sports Hall, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0b"
+  },
+  "name": "Sunset Tennis Club",
+  "images": [
+    "https://i.ibb.co/Ndf2TpXD/pexels-photo-2568551.jpg",
+    "https://i.ibb.co/CsVwwgfH/pexels-photo-28435181.webp"
+  ],
+  "shortDescription": "Well-lit hard courts for evening tennis.",
+  "description": "<p>Enjoy tennis matches under floodlights in a friendly club environment.</p>",
+  "pricePerHour": 35,
+  "capacity": 4,
+  "category": "tennis",
+  "highlight": "Floodlit courts with comfortable seating area.",
+  "openHours": "06:00 AM - 10:00 PM",
+  "rating": 4.6,
+  "location": "Sunset Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0c"
+  },
+  "name": "Blue Wave Swimming Center",
+  "images": [
+    "https://i.ibb.co/JjzQJkLM/pexels-photo-1147124.jpg",
+    "https://i.ibb.co/3YYRRSZ5/pexels-photo-261403.jpg"
+  ],
+  "shortDescription": "Heated indoor pool with lane dividers.",
+  "description": "<p>Perfect for swim training and recreational swimming.</p>",
+  "pricePerHour": 55,
+  "capacity": 25,
+  "category": "swimming",
+  "highlight": "Heated water with professional coaching available.",
+  "openHours": "06:00 AM - 09:00 PM",
+  "rating": 4.8,
+  "location": "Blue Wave Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0d"
+  },
+  "name": "Peak Fitness Gym",
+  "images": [
+    "https://i.ibb.co/Ldn28zv9/pexels-photo-1229356.webp",
+    "https://i.ibb.co/xKLhjv4h/pexels-photo-32172863.webp"
+  ],
+  "shortDescription": "Compact gym with quality equipment.",
+  "description": "<p>Great for quick workouts and strength training.</p>",
+  "pricePerHour": 20,
+  "capacity": 30,
+  "category": "gym",
+  "highlight": "Well-maintained machines and friendly staff.",
+  "openHours": "05:00 AM - 10:00 PM",
+  "rating": 4.5,
+  "location": "Peak Fitness Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0e"
+  },
+  "name": "Hilltop Cycling Track",
+  "images": [
+    "https://i.ibb.co/TB8Q0fKc/pexels-photo-3762505.jpg",
+    "https://i.ibb.co/0RcKNH6M/pexels-photo-1432885.jpg",
+    "https://i.ibb.co/sv2Gk2TF/pexels-photo-2270328.jpg",
+    "https://i.ibb.co/gLbT5VJb/pexels-photo-8927087.jpg"
+  ],
+  "shortDescription": "Challenging cycling track with hills and curves.",
+  "description": "<p>Perfect for endurance training and adventure cycling.</p>",
+  "pricePerHour": 20,
+  "capacity": 15,
+  "category": "cycling",
+  "highlight": "Scenic views with well-marked routes.",
+  "openHours": "06:00 AM - 07:00 PM",
+  "rating": 4.7,
+  "location": "Hilltop Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf0f"
+  },
+  "name": "Pro Table Tennis Center",
+  "images": [
+    "https://i.ibb.co/HDv8Kd3W/pexels-photo-4080060.webp",
+    "https://i.ibb.co/9mmN6SS2/pexels-photo-3846048.jpg"
+  ],
+  "shortDescription": "Multiple tables for practice and competition.",
+  "description": "<p>Host tournaments or train with a coach.</p>",
+  "pricePerHour": 25,
+  "capacity": 20,
+  "category": "table tennis",
+  "highlight": "Official ITTF-approved tables and equipment.",
+  "openHours": "08:00 AM - 10:00 PM",
+  "rating": 4.6,
+  "location": "Pro Sports Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf10"
+  },
+  "name": "Seaside Volleyball Courts",
+  "images": [
+    "https://i.ibb.co/bjMG3CKy/pexels-photo-12169164.jpg",
+    "https://i.ibb.co/84gZgJC6/free-photo-of-tourists-playing-beach-volleyball.jpg",
+    "https://i.ibb.co/WNsqvzZM/free-photo-of-beach-volleyball-net-on-sunny-coastal-day.jpg"
+  ],
+  "shortDescription": "Outdoor courts on the beach with soft sand.",
+  "description": "<p>Great place to play and relax by the sea.</p>",
+  "pricePerHour": 40,
+  "capacity": 12,
+  "category": "volleyball",
+  "highlight": "Beautiful ocean view and clean sand courts.",
+  "openHours": "08:00 AM - 08:00 PM",
+  "rating": 4.9,
+  "location": "Seaside Beach Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf11"
+  },
+  "name": "Westside Football Field",
+  "images": [
+    "https://i.ibb.co/LW02012/free-photo-of-dramatic-save-in-a-professional-football-match.jpg",
+    "https://i.ibb.co/7NdFGvZV/free-photo-of-intense-football-match-at-night-on-green-field.jpg",
+    "https://i.ibb.co/k2fXtH4h/free-photo-of-intense-soccer-match-action-on-the-field.jpg"
+  ],
+  "shortDescription": "Grass pitch with ample parking and amenities.",
+  "description": "<p>Ideal for weekend matches and football leagues.</p>",
+  "pricePerHour": 40,
+  "capacity": 22,
+  "category": "football",
+  "highlight": "Well-maintained turf and excellent facilities.",
+  "openHours": "07:00 AM - 09:00 PM",
+  "rating": 4.6,
+  "location": "Westside Sports Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf12"
+  },
+  "name": "Central Basketball Gym",
+  "images": [
+    "https://i.ibb.co/bcVkKBS/pexels-photo-3755451.jpg",
+    "https://i.ibb.co/FqwcRCz4/pexels-photo-7201554.jpg"
+  ],
+  "shortDescription": "Indoor court with locker rooms and showers.",
+  "description": "<p>Open for daily rentals and basketball camps.</p>",
+  "pricePerHour": 45,
+  "capacity": 12,
+  "category": "basketball",
+  "highlight": "Great for leagues and practice sessions.",
+  "openHours": "08:00 AM - 09:00 PM",
+  "rating": 4.7,
+  "location": "Central Sports Hall, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf13"
+  },
+  "name": "Parkside Tennis Courts",
+  "images": [
+    "https://i.ibb.co/LhnPg8Cd/free-photo-of-aerial-view-of-urban-sports-complex.jpg",
+    "https://i.ibb.co/WN2dZ9mB/pexels-photo-13850017.jpg"
+  ],
+  "shortDescription": "Outdoor hard courts with shade seating.",
+  "description": "<p>Family-friendly environment with coaching sessions available.</p>",
+  "pricePerHour": 28,
+  "capacity": 4,
+  "category": "tennis",
+  "highlight": "Clean courts and friendly staff.",
+  "openHours": "07:00 AM - 08:00 PM",
+  "rating": 4.5,
+  "location": "Parkside Sports Complex, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf14"
+  },
+  "name": "Crystal Clear Swimming Pool",
+  "images": [
+    "https://i.ibb.co/qYzDtXNy/pexels-photo-9399997.jpg",
+    "https://i.ibb.co/nNJ4SXSG/free-photo-of-dive-in.jpg",
+    "https://i.ibb.co/TBJyQK85/free-photo-of-man-diving-in-swimming-pool.jpg"
+  ],
+  "shortDescription": "Outdoor pool with kids' area and diving boards.",
+  "description": "<p>Safe and fun for families and swimmers of all ages.</p>",
+  "pricePerHour": 50,
+  "capacity": 35,
+  "category": "swimming",
+  "highlight": "Clean water with certified lifeguards.",
+  "openHours": "08:00 AM - 08:00 PM",
+  "rating": 4.8,
+  "location": "Crystal Sports Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf15"
+  },
+  "name": "Ironclad Gym",
+  "images": [
+    "https://i.ibb.co/xt3kMy9n/pexels-photo-841130.jpg",
+    "https://i.ibb.co/Z6Zdf9T2/istockphoto-1420597889-612x612.jpg",
+    "https://i.ibb.co/nqhDb72G/istockphoto-867186460-612x612.jpg"
+  ],
+  "shortDescription": "Heavy-duty gym with weights and crossfit equipment.",
+  "description": "<p>Ideal for strength training and group fitness classes.</p>",
+  "pricePerHour": 30,
+  "capacity": 40,
+  "category": "gym",
+  "highlight": "Certified trainers and diverse equipment options.",
+  "openHours": "06:00 AM - 11:00 PM",
+  "rating": 4.7,
+  "location": "Ironclad Fitness Hub, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf16"
+  },
+  "name": "Riverbend Cycling Path",
+  "images": [
+    "https://i.ibb.co/zVvff02c/free-photo-of-cyclist-riding-through-cove-island-park-at-sunrise.jpg",
+    "https://i.ibb.co/XxP06r42/free-photo-of-cyclist-on-a-forest-trail-in-romania.jpg",
+    "https://i.ibb.co/q3ZttmHC/free-photo-of-cyclist-enjoys-sunrise-ride-by-brazilian-beach.jpg",
+    "https://i.ibb.co/TMB1B19H/pexels-photo-247445.jpg"
+  ],
+  "shortDescription": "Flat cycling trail along the river with resting spots.",
+  "description": "<p>Perfect for casual cycling and families.</p>",
+  "pricePerHour": 10,
+  "capacity": 25,
+  "category": "cycling",
+  "highlight": "Safe and scenic route with easy access points.",
+  "openHours": "06:00 AM - 08:00 PM",
+  "rating": 4.5,
+  "location": "Riverbend Park, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf17"
+  },
+  "name": "Spin & Win Table Tennis Club",
+  "images": [
+    "https://i.ibb.co/5h0LLXpw/pexels-photo-8604906.webp",
+    "https://i.ibb.co/rGG3PqFq/istockphoto-2148789957-612x612.jpg",
+    "https://i.ibb.co/xqxHLVRw/istockphoto-2197558078-612x612.jpg"
+  ],
+  "shortDescription": "Friendly club for table tennis enthusiasts.",
+  "description": "<p>Regular tournaments and coaching available.</p>",
+  "pricePerHour": 22,
+  "capacity": 15,
+  "category": "table tennis",
+  "highlight": "Modern tables and social environment.",
+  "openHours": "08:00 AM - 09:00 PM",
+  "rating": 4.4,
+  "location": "Spin & Win Center, Cityville",
+  "isDeleted": false
+},
+{
+  "_id": {
+    "$oid": "682ff143912080671754cf18"
+  },
+  "name": "Sunrise Volleyball Courts",
+  "images": [
+    "https://i.ibb.co/sJdgJdyq/pexels-photo-2444852.webp",
+    "https://i.ibb.co/2YfH1R11/pexels-photo-13673444.webp",
+    "https://i.ibb.co/pB5v7yP9/pexels-photo-14018343.webp",
+    "https://i.ibb.co/FLdX3MNk/pexels-photo-8680267.webp"
+  ],
+  "shortDescription": "Well-maintained outdoor volleyball courts with nets.",
+  "description": "<p>Perfect for morning volleyball and weekend leagues.</p>",
+  "pricePerHour": 30,
+  "capacity": 12,
+  "category": "volleyball",
+  "highlight": "Clean courts with ample seating and lighting.",
+  "openHours": "07:00 AM - 07:00 PM",
+  "rating": 4.7,
+  "location": "Sunrise Sports Park, Cityville",
+  "isDeleted": false
+}]

@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "682c3255879914bf6b9a7871"
+  },
+  "name": "Md Junayed",
+  "email": "admin@gmail.com",
+  "password": "$2b$12$IrAAt6HwG.WX0G6jtriviuQDSvQkYcm/WXS8wc5LGp1h5Fdbgor3e",
+  "phone": "+8801814676613",
+  "role": "admin",
+  "address": "Korigaon, Lohajong, Munshiganj",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682c4142879914bf6b9a7891"
+  },
+  "name": "Mr User",
+  "email": "user@gmail.com",
+  "password": "$2b$12$yAWxmnmVWJ7HtnvMssXXAe49YINMYwXdmNYyGj7e4YJm2DRlqJuOS",
+  "phone": "01814676613",
+  "role": "user",
+  "address": "Somwhere and nowehere",
+  "__v": 0
+}]

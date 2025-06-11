@@ -7,6 +7,7 @@ const booking_route_1 = require("../modules/booking/booking.route");
 const user_route_1 = require("../modules/user/user.route");
 const payment_route_1 = require("../modules/payment/payment.route");
 const reviews_route_1 = require("../modules/reviews/reviews.route");
+const category_route_1 = require("../modules/category/category.route");
 const router = (0, express_1.Router)();
 const routes = [
     {
@@ -16,6 +17,10 @@ const routes = [
     {
         path: '/facility',
         route: facility_route_1.FacilityRoutes,
+    },
+    {
+        path: '/category',
+        route: category_route_1.CategoryRoutes,
     },
     {
         path: '/',

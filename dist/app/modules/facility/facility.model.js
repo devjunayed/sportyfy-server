@@ -23,6 +23,26 @@ const facilitySchema = new mongoose_1.Schema({
         type: Number,
         required: true,
     },
+    capacity: {
+        type: Number,
+        required: true,
+    },
+    category: {
+        type: String,
+        required: true,
+    },
+    highlight: {
+        type: String,
+        required: true,
+    },
+    openHours: {
+        type: String,
+        required: true,
+    },
+    rating: {
+        type: Number,
+        default: 5,
+    },
     location: {
         type: String,
         required: true,
