@@ -1,14 +1,20 @@
-export type TFacility = {
-  name: string
-  images: string[]
-  description: string
-  shortDescription: string
-  category: string
-  rating?: number
-  capacity: number
-  openHours: string
-  highlight: string
-  pricePerHour: number
-  location: string
-  isDeleted: boolean
+import { Types } from "mongoose"
+
+export type TSlot = {
+  facility: Types.ObjectId
+  date: string
+  startTime: string
+  endTime : string
+  bookedBy: Types.ObjectId | null
+  isBooked: boolean
+  isBlocked: boolean
+}
+
+
+export type TIncomingSlotData = {
+  dateRange:  [string, string],
+  startTime: string,
+  endTime: string,
+  facilities: string[],
+  slotInterval: number
 }

@@ -1,34 +1,17 @@
 import express from 'express'
-import { FacilityController } from './slots.controller'
+import {  SlotController } from './slots.controller'
 import auth from '../../middlewares/auth'
-import { validateRequest } from '../../middlewares/validateRequest'
-import { FacilityValidation } from './slots.validation'
+
 
 const router = express.Router()
 
-// Creating Facility
+// Creating Bulk Slots
 router.post(
-  '/',
+  '/bulk',
   auth('admin'),
-  validateRequest(FacilityValidation.createFacilityValidationSchema),
-  FacilityController.createFacility,
-)
-// updating Facility
-router.put(
-  '/:id',
-  auth('admin'),
-  validateRequest(FacilityValidation.updateFacilityValidationSchema),
-  FacilityController.updateFacility,
+  // validateRequest(FacilityValidation.createFacilityValidationSchema),
+  SlotController.createSlots,
 )
 
-// soft deleting facility
-router.delete('/:id', auth('admin'), FacilityController.deleteFacility)
 
-// get all facility
-router.get('/', FacilityController.getAllFacility)
-
-
-// get single facility
-router.get('/:id', FacilityController.getSingleFAcility)
-
-export const FacilityRoutes = router
+export const SlotRoutes = router

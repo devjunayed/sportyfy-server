@@ -1,55 +1,37 @@
 import { model, Schema } from 'mongoose'
-import { TFacility } from './slots.interface'
+import { TSlot } from './slots.interface'
 
-const facilitySchema = new Schema<TFacility>({
-  name: {
+const slotSchema = new Schema<TSlot>({
+  facility: {
+    type: Schema.Types.ObjectId,
+    ref: 'Facility',
+    required: true,
+  },
+  bookedBy: {
+    type: Schema.Types.ObjectId || null,
+    ref: 'User',
+    default: null
+  },
+  date: {
+    type: String,
+    required: true
+  },
+  startTime: {
     type: String,
     required: true,
   },
-  images: {
-    type: [String],
-    required: true,
-  },
-  shortDescription: {
+  endTime: {
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-    required: true,
-  },
-  pricePerHour: {
-    type: Number,
-    required: true,
-  },
-  capacity: {
-    type: Number,
-    required: true,
-  },
-  category: {
-    type: String,
-    required: true,
-  },
-  highlight: {
-    type: String,
-    required: true,
-  },
-  openHours: {
-    type: String,
-    required: true,
-  },
-  rating: {
-    type: Number,
-    default: 5,
-  },
-  location: {
-    type: String,
-    required: true,
-  },
-  isDeleted: {
+  isBlocked: {
     type: Boolean,
-    default: false,
+    default: false
   },
+  isBooked: {
+    type: Boolean,
+    default: false
+  }
 })
 
-export const Facility = model<TFacility>('Facility', facilitySchema)
+export const Slot = model<TSlot>('Slot', slotSchema)

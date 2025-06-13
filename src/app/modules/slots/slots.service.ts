@@ -1,59 +1,49 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { TFacility } from './slots.interface'
-import { Facility } from './slots.model'
 
-const createFacilityIntoDB = async (payload: TFacility) => {
-  const result = await Facility.create(payload)
-  return result
-}
+import { Types } from 'mongoose'
+import { TIncomingSlotData } from './slots.interface'
+import { Slot } from './slots.model'
+import dayjs from 'dayjs'
 
-const updateFacilityFromDB = async (id: string, payload: TFacility) => {
-  // updating data
-  await Facility.findByIdAndUpdate(id, payload)
+const createSlotsIntoDB = async (payload: TIncomingSlotData) => {
+  const { dateRange, startTime, endTime, facilities, slotInterval } = payload
 
-  // showing updated data
-  const facility = await Facility.findById(id)
-  return facility
-}
-const deleteFacilityFromDB = async (id: string) => {
-  // soft deleting data
-  await Facility.findByIdAndUpdate(id, { isDeleted: true })
+  const allSlots = []
 
-  // showing updated data
-  const facility = await Facility.findById(id)
-  return facility
-}
-const getAllFacilityFromDB = async ({
-  search = '',
-  minPrice = 0,
-  maxPrice = Infinity,
-}) => {
-  const query: any = { isDeleted: { $ne: true } }
+  const startDate = dayjs(dateRange[0])
+  const endDate = dayjs(dateRange[1])
 
-  if (search) {
-    query.$or = [
-      { name: { $regex: search, $options: 'i' } },
-      { location: { $regex: search, $options: 'i' } },
-    ]
+  for (
+    let currentDate = startDate;
+    currentDate.isBefore(endDate) || currentDate.isSame(endDate, 'day');
+    currentDate = currentDate.add(1, 'day')
+  ) {
+    const dateString = currentDate.format('YYYY-MM-DD')
+
+    for (const facility of facilities) {
+      let slotStart = dayjs(`${dateString}T${startTime}`)
+      const slotEndLimit = dayjs(`${dateString}T${endTime}`)
+
+      while (slotStart.isBefore(slotEndLimit)) {
+        const slotEnd = slotStart.add(slotInterval, 'minute')
+
+        allSlots.push({
+          facility: new Types.ObjectId(facility),
+          date: dateString,
+          startTime: slotStart.format('HH:mm'),
+          endTime: slotEnd.format('HH:mm'),
+        })
+        slotStart = slotEnd;
+      }
+      
+    }
   }
 
-  if (minPrice || maxPrice) {
-    query.pricePerHour = { $gte: minPrice, $lte: maxPrice }
-  }
+  const result = await Slot.insertMany(allSlots);
 
-  const result = await Facility.find(query)
-  return result
+  return result;
 }
 
-const getSingleFacilityFromDB = async (id: string) => {
-  const result = await Facility.findOne({ _id: id })
-  return result
-}
-
-export const FacilityService = {
-  createFacilityIntoDB,
-  updateFacilityFromDB,
-  deleteFacilityFromDB,
-  getAllFacilityFromDB,
-  getSingleFacilityFromDB,
+export const SlotService = {
+  createSlotsIntoDB,
 }
