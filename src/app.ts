@@ -3,18 +3,24 @@ import router from './app/routes'
 import cors from 'cors'
 import globalErrorHandler from './app/middlewares/globalErrorhandler'
 import { notFound } from './app/middlewares/notFound'
+import config from './app/config'
 
 // creating app
 const app: Application = express()
 
 // cors
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://sportyfy.devjunayed.xyz'],
-  methods: ["GET", "POST", "PUT", "UPDATE", "DELETE"],
-  credentials: true,
-  allowedHeaders: ["Content-Type", "Authorization"]
-}))
-
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'https://sportyfy-devjunayed.vercel.app',
+      config.frontend_url as string,
+    ],
+    methods: ['GET', 'POST', 'PUT', 'UPDATE', 'DELETE'],
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }),
+)
 
 // middlewares for getting data from the frontend
 app.use(express.json())

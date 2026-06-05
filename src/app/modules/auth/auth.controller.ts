@@ -4,7 +4,9 @@ import { sendResponse } from '../../utils/sendResponse'
 import { AuthService } from './auth.service'
 
 const logInUser = catchAsync(async (req, res) => {
+  console.log("Attempting for login");
   const user = await AuthService.logInUser(req.body)
+
   res.cookie('token', user.accessToken)
   sendResponse(res, {
     success: true,

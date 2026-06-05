@@ -16,5 +16,6 @@ export default {
   store_id:process.env.STORE_ID,
   signature: process.env.SIGNATURE_KEY,
   store_pass: process.env.STORE_PASS,
-  server_api: process.env.SERVER_API
+  server_api: process.env.SERVER_API,
+  frontend_url: process.env.FRONTEND_URL
 }

@@ -12,7 +12,7 @@ const notFound_1 = require("./app/middlewares/notFound");
 const app = (0, express_1.default)();
 // cors
 app.use((0, cors_1.default)({
-    origin: ['http://localhost:5173', 'https://sportyfy.devjunayed.xyz'],
+    origin: ['http://localhost:3000', 'https://sportyfy-devjunayed.vercel.app'],
     methods: ["GET", "POST", "PUT", "UPDATE", "DELETE"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     });
 });
 // using routes
-app.use('/api/', routes_1.default);
+app.use('/api/v1', routes_1.default);
 // global error handler
 app.use(globalErrorhandler_1.default);
 // api not found

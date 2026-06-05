@@ -12,23 +12,20 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AuthController = void 0;
+exports.SlotController = void 0;
 const http_status_1 = __importDefault(require("http-status"));
 const catchAsync_1 = require("../../utils/catchAsync");
 const sendResponse_1 = require("../../utils/sendResponse");
-const auth_service_1 = require("./auth.service");
-const logInUser = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log("Attempting for login");
-    const user = yield auth_service_1.AuthService.logInUser(req.body);
-    res.cookie('token', user.accessToken);
+const slots_service_1 = require("./slots.service");
+const createSlots = (0, catchAsync_1.catchAsync)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const result = yield slots_service_1.SlotService.createSlotsIntoDB(req.body);
     (0, sendResponse_1.sendResponse)(res, {
         success: true,
         statusCode: http_status_1.default.OK,
-        token: user.accessToken,
-        message: 'User logged in successfully',
-        data: user.user,
+        message: 'Slots created successfully',
+        data: result,
     });
 }));
-exports.AuthController = {
-    logInUser,
+exports.SlotController = {
+    createSlots
 };
